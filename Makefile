@@ -1,7 +1,7 @@
 CXX     := g++
-LDLIBS  := -lSDL3
+LDLIBS  := -lSDL3	
 
-all: *.o
+main: main.o game_renderer.o atlas.o
 	$(CXX) $(LDFLAGS) $^ $(LDLIBS) -o main.out
 
 %.o : %.cc
