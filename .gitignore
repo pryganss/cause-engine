@@ -1,0 +1,5 @@
+*.o
+main.out
+compile_commands.json
+.cache/
+.dir_locals.el
