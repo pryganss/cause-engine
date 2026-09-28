@@ -2,6 +2,7 @@
 
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_render.h>
+#include <SDL3/SDL_surface.h>
 #include <SDL3/SDL_video.h>
 #include <string.h>
 
@@ -35,6 +36,8 @@ int SetupSDL() {
         SDL_Quit();
         return 1;
     }
+
+    SDL_SetDefaultTextureScaleMode(game_renderer, SDL_SCALEMODE_PIXELART);
 
     return 0;
 }
