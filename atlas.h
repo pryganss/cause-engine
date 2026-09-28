@@ -9,7 +9,8 @@ namespace atlas {
 
 class Atlas {
    public:
-    Atlas(SDL_Surface* surface, int t_width, int t_height);
+    Atlas(SDL_Surface* surface, int t_width, int t_height, int margin_x,
+          int margin_y);
     ~Atlas();
     SDL_Surface* GetSurfaceFromIndex(int index);
 

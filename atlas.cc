@@ -8,7 +8,8 @@
 namespace cause_engine {
 namespace atlas {
 
-Atlas::Atlas(SDL_Surface* surface, int t_width, int t_height) {
+Atlas::Atlas(SDL_Surface* surface, int t_width, int t_height, int margin_x,
+             int margin_y) {
     if (surface->w < t_width || surface->h < t_height) {
         throw std::invalid_argument(
             "Surface too small to create Atlas from given dimensions");
@@ -40,9 +41,9 @@ Atlas::Atlas(SDL_Surface* surface, int t_width, int t_height) {
             SDL_DestroySurface(new_surface);
 
             index++;
-            rect.x += t_width;
+            rect.x += t_width + margin_x;
         }
-        rect.y += t_height;
+        rect.y += t_height + margin_y;
     }
 }
 
