@@ -13,6 +13,7 @@ class Atlas {
           int margin_y);
     ~Atlas();
     SDL_Surface* GetSurfaceFromIndex(int index);
+    int GetAtlasSize();
 
    private:
     SDL_Surface** srf_array;

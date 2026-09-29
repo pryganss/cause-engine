@@ -54,6 +54,8 @@ Atlas::~Atlas() {
     delete[] srf_array;
 }
 
+int Atlas::GetAtlasSize() { return array_len; }
+
 SDL_Surface* Atlas::GetSurfaceFromIndex(int index) {
     if (0 > index >= array_len) {
         return NULL;
